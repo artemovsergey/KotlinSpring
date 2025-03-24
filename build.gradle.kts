@@ -25,6 +25,21 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+	// Spring Data JPA
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+	// PostgreSQL Driver
+	runtimeOnly("org.postgresql:postgresql")
+
+	// Flyway
+	implementation("org.flywaydb:flyway-core")
+
+	// Дополнительно: Spring Boot DevTools для удобства разработки
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
+
+	//Swagger
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
 }
 
 kotlin {

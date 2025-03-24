@@ -1,6 +1,6 @@
-package repositories
+package com.example.kotlinapi.repositories
 
-import models.User
+import com.example.kotlinapi.models.User
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface UserRepository {

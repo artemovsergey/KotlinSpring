@@ -1,8 +1,8 @@
-package repositories
+package com.example.kotlinapi.repositories
 
 import jakarta.persistence.EntityManager
 import jakarta.persistence.PersistenceContext
-import models.User
+import com.example.kotlinapi.models.User
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 

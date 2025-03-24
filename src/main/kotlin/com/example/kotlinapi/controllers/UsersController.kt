@@ -1,18 +1,18 @@
-package com.example.kotlinapi
+package com.example.kotlinapi.controllers
 
-import models.User
+import com.example.kotlinapi.models.User
 import org.springframework.web.bind.annotation.*
-import repositories.UserRepositoryImpl
+import com.example.kotlinapi.repositories.UserRepositoryImpl
 
 @RestController
 @RequestMapping("/users")
-class UserController(private val userRepository: UserRepositoryImpl) {
+class UsersController(private val userRepository: UserRepositoryImpl) {
 
     @GetMapping
     fun getAllUsers(): List<User> = userRepository.findAll()
 
     @GetMapping("/{id}")
-    fun getUserById(@PathVariable id: Long): User{
+    fun getUserById(@PathVariable id: Long): User {
         return userRepository.findById(id) ?: throw Exception()
     }
 
