@@ -1,0 +1,12 @@
+package repositories
+
+import models.User
+import org.springframework.data.jpa.repository.JpaRepository
+
+interface UserRepository {
+    fun save(user: User): User
+    fun findById(id: Long): User?
+    fun findAll(): List<User>
+    fun deleteById(id: Long)
+    fun update(user: User): User
+}
